@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: skin_disease_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: skin_disease_backend # (Tên này có thể khác tùy bạn đặt)
+    restart: always  # <--- THÊM DÒNG NÀY VÀO
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=admin
+      - DB_PASSWORD=123456
+      - DB_NAME=skin_disease_db
+      - DB_PORT=5432
+      - PYTHON_API_URL=http://ml-api:8000
+      - JWT_SECRET=123456
+    depends_on:
+      - db
+      - ml-api
+
+  ml-api:
+    build: ./ml-api
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=AIzaSyCd_aC-SjlEBj7EFIOZLwBU5j3DCV5efb4
+
+volumes:
+  postgres_data:

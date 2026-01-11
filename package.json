@@ -1,0 +1,33 @@
+{
+  "name": "skin-disease-detection",
+  "version": "1.0.0",
+  "description": "Hệ thống phân tích bệnh ngoài da sử dụng AI",
+  "scripts": {
+    "install-all": "cd frontend && npm install && cd ../backend && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ml": "cd ml-api && venv\\Scripts\\activate && uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "build:frontend": "cd frontend && npm run build",
+    "setup:python": "cd ml-api && python -m venv venv && venv\\Scripts\\activate && pip install -r requirements.txt"
+  },
+  "keywords": [
+    "skin-disease",
+    "ai",
+    "vue",
+    "express",
+    "fastapi",
+    "vision-transformer"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.12.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}
