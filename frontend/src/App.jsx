@@ -3,9 +3,9 @@ import { AuthProvider } from './context/AuthContext';
 
 // Import các trang
 import Navbar from './components/Navbar'; // <-- Nhớ Import cái này
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Home from './pages/Home';
+import Login from './pages/login';
+import Register from './pages/register';
+import Home from './pages/home';
 import Detection from './pages/Detection';
 import History from './pages/History';
 
