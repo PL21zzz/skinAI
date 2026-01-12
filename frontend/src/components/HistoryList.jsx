@@ -43,7 +43,7 @@ const HistoryList = () => {
     if (!path) return '';
     if (path.startsWith('http')) return path;
     // Thay đổi port nếu backend của bạn khác 5000
-    const API_BASE = 'http://localhost:5000';
+    const API_BASE = 'https://skinbe.onrender.com';
     // Loại bỏ dấu / đầu nếu có để tránh double slash
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
     return `${API_BASE}${cleanPath}`;

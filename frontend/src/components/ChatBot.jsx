@@ -9,7 +9,7 @@ const ChatBot = ({ initialContext }) => {
   const messagesContainerRef = useRef(null);
 
   // URL API Backend (Lấy từ biến môi trường hoặc dùng mặc định)
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  const API_URL = import.meta.env.VITE_API_URL || 'https://skinbe.onrender.com';
 
   // Hàm cuộn xuống cuối khung chat
   const scrollToBottom = () => {

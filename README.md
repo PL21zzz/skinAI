@@ -8,11 +8,11 @@ Dự án này cung cấp một hệ thống hoàn chỉnh để phát hiện và
 
 ### Tính Năng Chính
 
-**Phát hiện bệnh ngoài da** từ hình ảnh tải lên  
- **Độ chính xác cao** với mô hình Vision Transformer  
- **Xác thực người dùng** với JWT  
- **Lịch sử dự đoán** cho mỗi người dùng  
- **Giao diện thân thiện** với Vue.js và Tailwind CSS  
+**Phát hiện bệnh ngoài da** từ hình ảnh tải lên
+ **Độ chính xác cao** với mô hình Vision Transformer
+ **Xác thực người dùng** với JWT
+ **Lịch sử dự đoán** cho mỗi người dùng
+ **Giao diện thân thiện** với Vue.js và Tailwind CSS
 **API Documentation** tự động với FastAPI
 
 ### Tech Stack
@@ -177,7 +177,7 @@ npm run dev:ml
 Sau khi chạy tất cả services:
 
 - **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000
+- **Backend API**: https://skinbe.onrender.com
 - **ML API**: http://localhost:8000
 - **ML API Docs**: http://localhost:8000/docs
 
@@ -247,7 +247,7 @@ Predict_Skin_Diseases/
 
 ```powershell
 # Health check
-curl http://localhost:5000/health
+curl https://skinbe.onrender.com/health
 ```
 
 ### Test ML API
