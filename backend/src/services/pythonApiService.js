@@ -2,7 +2,7 @@ import axios from 'axios'
 import FormData from 'form-data'
 import fs from 'fs'
 
-const PYTHON_API_URL = 'http://ml-api:8000';
+const PYTHON_API_URL = process.env.PYTHON_API_URL || 'http://ml-api:8000';
 
 export const predictImage = async (imagePath) => {
   try {
